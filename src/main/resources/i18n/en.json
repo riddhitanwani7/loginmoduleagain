@@ -1,0 +1,6 @@
+{
+  "login.success": "Login successful",
+  "login.error": "Invalid credentials",
+  "register.success": "Registration successful",
+  "token.refreshed": "Token refreshed successfully"
+}

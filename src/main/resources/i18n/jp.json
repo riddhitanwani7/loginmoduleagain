@@ -1,0 +1,6 @@
+{
+  "login.success": "ログインに成功しました",
+  "login.error": "無効な資格情報です",
+  "register.success": "登録に成功しました",
+  "token.refreshed": "トークンを更新しました"
+}
