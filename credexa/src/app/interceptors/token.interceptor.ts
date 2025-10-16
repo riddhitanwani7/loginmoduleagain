@@ -4,6 +4,10 @@ import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
 export const tokenInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> => {
+  // Bypass static asset requests (e.g., translation files)
+  if (req.url.includes('/assets/')) {
+    return next(req);
+  }
   const auth = inject(AuthService);
   const accessToken = auth.token;
   const user = auth.user;

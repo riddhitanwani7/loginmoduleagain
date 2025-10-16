@@ -9,7 +9,7 @@ import { TranslateHttpLoader, TRANSLATE_HTTP_LOADER_CONFIG } from '@ngx-translat
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 
-export function HttpLoaderFactory(http: HttpClient) {
+export function HttpLoaderFactory() {
   return new TranslateHttpLoader();
 
 }
