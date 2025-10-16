@@ -40,6 +40,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/auth/**").permitAll()
                 .requestMatchers("/api/public/**").permitAll()
                 .requestMatchers("/api/test/public").permitAll()
+                .requestMatchers("/", "/error", "/favicon.ico", "/assets/**", "/css/**", "/js/**", "/images/**").permitAll()
                 .requestMatchers("/actuator/health", "/actuator/health/**", "/actuator/info").permitAll()
                 .anyRequest().authenticated()
             )
